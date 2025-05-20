@@ -22,8 +22,6 @@ func LoadEnv() (*types.ConfigDB, error) {
 		return nil, fmt.Errorf("failed to parse config: %w", err)
 	}
 
-	log.Println(cfg)
-
 	log.Println("Config loaded successfully")
 	return cfg, nil
 }

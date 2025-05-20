@@ -7,9 +7,9 @@ import (
 )
 
 func AuthRoutes(app fiber.Router, handler *auth.AuthHandler) {
-	app.Post("/v1/auth/login", handler.LoginHandler)
-	app.Post("/v1/auth/register", handler.RegisterHandler)
+	app.Post("/login", handler.LoginHandler)
+	app.Post("/register", handler.RegisterHandler)
 
 	// check auth
-	app.Get("/v1/auth/check", middleware.Auth, handler.AuthCheck)
+	app.Get("/check", middleware.Auth, handler.AuthCheck)
 }
